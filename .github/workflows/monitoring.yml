@@ -1,0 +1,43 @@
+name: Monitoring Simulation
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Show Prometheus config
+        run: |
+          echo "📄 Prometheus configuration file found:"
+          cat prometheus/prometheus.yml
+
+      - name: Simulate Node Exporter run
+        run: |
+          echo "🚀 Starting Node Exporter container (simulated)..."
+          echo "✅ Node Exporter running on port 9100"
+
+      - name: Simulate Prometheus run
+        run: |
+          echo "🚀 Starting Prometheus container (simulated)..."
+          echo "✅ Prometheus running on port 9090"
+          echo "✅ Configuration file loaded successfully"
+
+      - name: Simulate Grafana run
+        run: |
+          echo "🚀 Starting Grafana container (simulated)..."
+          echo "✅ Grafana running on port 3000"
+          echo "✅ Login: admin / Password: admin"
+          echo "✅ Data source 'Prometheus' added (URL: http://prometheus:9090)"
+          echo "✅ Dashboard created with metric: node_cpu_seconds_total"
+
+      - name: Final verification
+        run: |
+          echo "🟢 All simulated services are running"
+          echo "Prometheus → localhost:9090"
+          echo "Grafana → localhost:3000"
+          echo "Node Exporter → localhost:9100"
