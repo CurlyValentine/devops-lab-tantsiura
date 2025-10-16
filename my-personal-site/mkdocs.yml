@@ -1,0 +1,66 @@
+site_name: "Valentin T 13"
+site_description: "Хз6 делаем по кайфу"
+site_author: "Valentin Tantsiura"
+site_url: ""  # укажешь позже, если будешь публиковать
+
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.share
+  palette:
+    - scheme: default       # Светлая тема
+      primary: indigo       # основной цвет
+      accent: indigo        # акцентный цвет
+    - scheme: slate         # Тёмная тема
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Переключить на светлую тему
+  logo: images/logo.png
+
+nav:
+  - Главная: index.md
+  - О себе: about.md
+  - Проекты: projects.md
+  - Контакты: contacts.md
+  - Резюме: resume.md
+  - Достижения: achievements.md
+  - Заметки:
+      - Обзор: notes/index.md
+      - Идеи: notes/ideas.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - def_list
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+copyright: "© 2025 Valentin Tantsiura"
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/curlyValentin
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/valentin-tantsiura/
+      name: LinkedIn
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/tantsiura_val
+      name: Telegram
